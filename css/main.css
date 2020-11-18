@@ -40,14 +40,14 @@
   .menu-nav {
     margin: 0;
     padding: 0;
-    background: #373737;
+    background: #161616;
     list-style: none;
     transform: translate3d(0, -100%, 0);
     transition: all 0.5s ease-out; }
     .menu-nav.show {
       transform: translate3d(0, 0, 0); }
   .menu-branding {
-    background: #444;
+    background: #232323;
     transform: translate3d(0, 100%, 0);
     transition: all 0.5s ease-out; }
     .menu-branding.show {
@@ -94,7 +94,7 @@
   box-sizing: border-box; }
 
 body {
-  background: #444;
+  background: #232323;
   color: #fff;
   height: 100%;
   margin: 0;
@@ -112,7 +112,7 @@ body {
       width: 100%;
       height: 200%;
       z-index: -1;
-      background: rgba(68, 68, 68, 0.9); }
+      background: rgba(35, 35, 35, 0.9); }
 
 h1,
 h2,
@@ -128,7 +128,10 @@ h3 {
   h3.sm-heading {
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
-    background: rgba(73, 73, 73, 0.6); }
+    background: rgba(40, 40, 40, 0.6); }
+
+.title {
+  font-size: 4rem; }
 
 a {
   color: #fff;
@@ -157,27 +160,24 @@ main {
         color: #4267b2;
         transition: 1s; }
       main .icons a .fa-facebook:hover {
-        font-size: 38px;
+        font-size: 3.5rem;
         color: #002364; }
       main .icons a .fa-linkedin {
         color: #006192;
         transition: 1s; }
       main .icons a .fa-linkedin:hover {
-        font-size: 38px;
+        font-size: 3.5rem;
         color: black; }
       main .icons a .fa-github {
-        color: black;
+        color: #1e1e1e;
         transition: 1s; }
       main .icons a .fa-github:hover {
-        font-size: 38px;
-        color: #292929; }
+        color: black;
+        font-size: 3.5rem; }
   main#home {
     overflow: hidden; }
     main#home h1 {
       margin-top: 20vh; }
-
-#about {
-  background: black; }
 
 .about-info {
   align-content: center; }
@@ -196,14 +196,16 @@ main {
     position: relative;
     border-left: yellow 5px solid; }
     .about-info .timeline .job {
-      background: black;
+      background: #232323;
       display: flex;
       flex-direction: column;
       justify-content: center;
       padding: 1rem;
       width: 80%;
-      margin: 1rem 7rem;
+      margin: 1rem 9.5rem;
       align-items: center; }
+      .about-info .timeline .job h2 {
+        margin: 1rem; }
       .about-info .timeline .job::before {
         position: absolute;
         display: block;
@@ -224,55 +226,50 @@ main {
         background-size: cover;
         background-color: black; }
       .about-info .timeline .job .paragrafo {
-        text-align: justify; }
+        text-align: justify;
+        font-size: larger; }
     .about-info .timeline .job-1 {
       border-top: #bebebe 3px solid; }
       .about-info .timeline .job-1 img {
-        top: 1rem;
-        left: 10rem;
-        position: absolute;
+        position: relative;
+        left: -40rem;
         height: 4rem; }
     .about-info .timeline .job-2 {
       border-top: #c21c34 3px solid; }
       .about-info .timeline .job-2 img {
-        top: 13.5rem;
-        left: 10rem;
-        position: absolute;
+        left: -40rem;
+        position: relative;
         height: 4rem; }
     .about-info .timeline .job-3 {
       border-top: #1eff00 3px solid; }
       .about-info .timeline .job-3 img {
-        top: 28rem;
-        left: 10rem;
-        position: absolute;
+        left: -40rem;
+        position: relative;
         height: 4rem; }
     .about-info .timeline .job-4 {
       border-top: #ff00c8 3px solid; }
       .about-info .timeline .job-4 img {
-        top: 42rem;
-        left: 10rem;
-        position: absolute;
+        left: -40rem;
+        position: relative;
         height: 4rem; }
     .about-info .timeline .job-5 {
       border-top: #00ffeb 3px solid; }
       .about-info .timeline .job-5 img {
-        top: 55rem;
-        left: 10rem;
-        position: absolute;
+        left: -38rem;
+        position: relative;
         height: 3rem; }
 
 .skills .lista {
-  list-style: none; }
+  list-style: none;
+  font-size: larger; }
 
 .skills meter {
   width: 90%;
-  height: 1.5rem;
+  height: 1.8rem;
   margin: 10px;
-  --optimum: rgb(51, 255, 0);
-  --sub-optimum: rgb(0, 49, 4);
-  --background: #dadada;
-  --optimum: rgb(0, 4, 255);
+  --optimum: rgb(228, 102, 0);
   --sub-optimum: forestgreen;
+  --background: #dadada;
   --sub-sub-optimum: crimson;
   display: block; }
   .skills meter::-webkit-meter-bar {
@@ -287,17 +284,20 @@ main {
       background: var(--sub-optimum); }
 
 .skills .lista-skills li {
-  margin-bottom: 16px;
+  margin: 2rem 1rem;
   text-align: right; }
   .skills .lista-skills li span {
     font-size: 20px;
     margin: 0 10px; }
 
 .skills .lista-barras li {
-  margin-bottom: 25px;
   text-align: left; }
-  .skills .lista-barras li :first-child {
-    margin-top: 25px; }
+
+.skills .l1 li {
+  margin: 2.5rem 0; }
+
+.skills .l2 li {
+  margin: 2.1rem 0; }
 
 .skills .lingua:first-child {
   margin-top: 25px; }
@@ -368,16 +368,24 @@ main {
   color: #fff; }
 
 .btn-light {
-  background: #c4c4c4;
+  background: #a3a3a3;
   color: #333; }
 
 #main-footer {
   padding-bottom: 0;
   width: 100%;
   text-align: center;
-  background: #2b2b2b;
+  background: #0a0a0a;
   color: #fff;
   height: 60px; }
+
+.typing {
+  font-size: xx-large;
+  font-weight: Bold;
+  color: #b9b9b9; }
+
+.nome {
+  color: #b9b9b9; }
 
 @media screen and (min-width: 1171px) {
   .projects {
