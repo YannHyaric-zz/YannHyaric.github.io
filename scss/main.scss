@@ -32,7 +32,9 @@ h3 {
     background: rgba(lighten($primary-color, 2), 0.6);
   }
 }
-
+.title {
+  font-size: 4rem;
+}
 a {
   color: #fff;
   text-decoration: none;
@@ -51,6 +53,7 @@ header {
 main {
   padding: 4rem;
   text-align: center;
+
   .icons {
     margin-top: 1rem;
     margin-bottom: 1rem;
@@ -67,7 +70,7 @@ main {
         transition: 1s;
       }
       .fa-facebook:hover {
-        font-size: 38px;
+        font-size: 3.5rem;
         color: rgb(0, 35, 100);
       }
       .fa-linkedin {
@@ -75,16 +78,16 @@ main {
         transition: 1s;
       }
       .fa-linkedin:hover {
-        font-size: 38px;
+        font-size: 3.5rem;
         color: black;
       }
       .fa-github {
-        color: black;
+        color: rgb(30, 30, 30);
         transition: 1s;
       }
       .fa-github:hover {
-        font-size: 38px;
-        color: rgb(41, 41, 41);
+        color: black;
+        font-size: 3.5rem;
       }
     }
   }
@@ -96,9 +99,7 @@ main {
     }
   }
 }
-#about {
-  background: black;
-}
+
 .about-info {
   align-content: center;
   .bio-image {
@@ -121,14 +122,18 @@ main {
     border-left: rgb(255, 255, 0) 5px solid;
 
     .job {
-      background: black;
+      background: $primary-color;
       display: flex;
       flex-direction: column;
       justify-content: center;
       padding: 1rem;
       width: 80%;
-      margin: 1rem 7rem;
+      margin: 1rem 9.5rem;
       align-items: center;
+
+      h2 {
+        margin: 1rem;
+      }
       &::before {
         position: absolute;
         display: block;
@@ -154,15 +159,15 @@ main {
       }
       .paragrafo {
         text-align: justify;
+        font-size: larger;
       }
     }
     .job-1 {
       border-top: rgb(190, 190, 190) 3px solid;
 
       img {
-        top: 1rem;
-        left: 10rem;
-        position: absolute;
+        position: relative;
+        left: -40rem;
         height: 4rem;
       }
     }
@@ -170,9 +175,8 @@ main {
       border-top: rgb(194, 28, 52) 3px solid;
 
       img {
-        top: 13.5rem;
-        left: 10rem;
-        position: absolute;
+        left: -40rem;
+        position: relative;
         height: 4rem;
       }
     }
@@ -180,9 +184,8 @@ main {
       border-top: rgb(30, 255, 0) 3px solid;
 
       img {
-        top: 28rem;
-        left: 10rem;
-        position: absolute;
+        left: -40rem;
+        position: relative;
         height: 4rem;
       }
     }
@@ -190,18 +193,16 @@ main {
       border-top: rgb(255, 0, 200) 3px solid;
 
       img {
-        top: 42rem;
-        left: 10rem;
-        position: absolute;
+        left: -40rem;
+        position: relative;
         height: 4rem;
       }
     }
     .job-5 {
       border-top: rgb(0, 255, 235) 3px solid;
       img {
-        top: 55rem;
-        left: 10rem;
-        position: absolute;
+        left: -38rem;
+        position: relative;
         height: 3rem;
       }
     }
@@ -212,16 +213,15 @@ main {
 .skills {
   .lista {
     list-style: none;
+    font-size: larger;
   }
   meter {
     width: 90%;
-    height: 1.5rem;
+    height: 1.8rem;
     margin: 10px;
-    --optimum: rgb(51, 255, 0);
-    --sub-optimum: rgb(0, 49, 4);
-    --background: #dadada;
-    --optimum: rgb(0, 4, 255);
+    --optimum: rgb(228, 102, 0);
     --sub-optimum: forestgreen;
+    --background: #dadada;
     --sub-sub-optimum: crimson;
     display: block;
     &::-webkit-meter-bar {
@@ -241,7 +241,7 @@ main {
     }
   }
   .lista-skills li {
-    margin-bottom: 16px;
+    margin: 2rem 1rem;
     text-align: right;
     span {
       font-size: 20px;
@@ -249,11 +249,13 @@ main {
     }
   }
   .lista-barras li {
-    margin-bottom: 25px;
     text-align: left;
-    :first-child {
-      margin-top: 25px;
-    }
+  }
+  .l1 li {
+    margin: 2.5rem 0;
+  }
+  .l2 li {
+    margin: 2.1rem 0;
   }
   .lingua:first-child {
     margin-top: 25px;
@@ -360,6 +362,15 @@ main {
   background: darken($primary-color, 10);
   color: set-text-color($primary-color);
   height: 60px;
+}
+
+.typing {
+  font-size: xx-large;
+  font-weight: Bold;
+  color: rgb(185, 185, 185);
+}
+.nome {
+  color: rgb(185, 185, 185);
 }
 
 @import "mobile";
