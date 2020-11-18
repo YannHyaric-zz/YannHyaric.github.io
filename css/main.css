@@ -339,7 +339,7 @@ main#home h1 {
   margin: 10px;
   --optimum: rgb(228, 102, 0);
   --sub-optimum: forestgreen;
-  --background: #dadada;
+  --background: grey;
   --sub-sub-optimum: crimson;
   display: block;
 }
