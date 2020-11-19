@@ -141,6 +141,9 @@ header {
   position: fixed;
   z-index: 2;
   width: 100%; }
+  header a {
+    display: flex;
+    flex-direction: column; }
 
 .text-secondary {
   color: #eece1a; }
@@ -228,37 +231,21 @@ main {
       .about-info .timeline .job .paragrafo {
         text-align: justify;
         font-size: larger; }
-    .about-info .timeline .job-1 {
-      border-top: #bebebe 3px solid; }
-      .about-info .timeline .job-1 img {
+      .about-info .timeline .job img {
         left: -30rem;
         position: relative;
         height: 4rem; }
+    .about-info .timeline .job-1 {
+      border-top: #bebebe 3px solid; }
     .about-info .timeline .job-2 {
       border-top: #c21c34 3px solid;
       text-align: left; }
-      .about-info .timeline .job-2 img {
-        left: -32rem;
-        position: relative;
-        height: 4rem; }
-    .about-info .timeline .job-3 {
-      border-top: #1eff00 3px solid; }
-      .about-info .timeline .job-3 img {
-        left: -33rem;
-        position: relative;
-        height: 4rem; }
-    .about-info .timeline .job-4 {
-      border-top: #ff00c8 3px solid; }
-      .about-info .timeline .job-4 img {
-        left: -30rem;
-        position: relative;
-        height: 4rem; }
-    .about-info .timeline .job-5 {
-      border-top: #00ffeb 3px solid; }
-      .about-info .timeline .job-5 img {
-        left: -28rem;
-        position: relative;
-        height: 3rem; }
+      .about-info .timeline .job-2 .job-3 {
+        border-top: #1eff00 3px solid; }
+      .about-info .timeline .job-2 .job-4 {
+        border-top: #ff00c8 3px solid; }
+      .about-info .timeline .job-2 .job-5 {
+        border-top: #00ffeb 3px solid; }
 
 .skills .lista {
   list-style: none;

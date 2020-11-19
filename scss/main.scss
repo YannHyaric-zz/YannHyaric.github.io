@@ -44,6 +44,10 @@ header {
   position: fixed;
   z-index: 2;
   width: 100%;
+  a{
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .text-secondary {
@@ -161,49 +165,29 @@ main {
         text-align: justify;
         font-size: larger;
       }
-    }
-    .job-1 {
-      border-top: rgb(190, 190, 190) 3px solid;
+
       img {
         left: -30rem;
         position: relative;
         height: 4rem;
       }
+    }
+    .job-1 {
+      border-top: rgb(190, 190, 190) 3px solid;
+      
     }
     .job-2 {
       border-top: rgb(194, 28, 52) 3px solid;
       text-align: left;
 
-      img {
-        left: -32rem;
-        position: relative;
-        height: 4rem;
-      }
-    }
     .job-3 {
       border-top: rgb(30, 255, 0) 3px solid;
-
-      img {
-        left: -33rem;
-        position: relative;
-        height: 4rem;
-      }
     }
     .job-4 {
       border-top: rgb(255, 0, 200) 3px solid;
-
-      img {
-        left: -30rem;
-        position: relative;
-        height: 4rem;
-      }
     }
     .job-5 {
       border-top: rgb(0, 255, 235) 3px solid;
-      img {
-        left: -28rem;
-        position: relative;
-        height: 3rem;
       }
     }
   }
