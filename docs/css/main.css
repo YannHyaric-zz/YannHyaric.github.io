@@ -231,11 +231,12 @@ main {
     .about-info .timeline .job-1 {
       border-top: #bebebe 3px solid; }
       .about-info .timeline .job-1 img {
-        position: relative;
         left: -35rem;
+        position: relative;
         height: 4rem; }
     .about-info .timeline .job-2 {
-      border-top: #c21c34 3px solid; }
+      border-top: #c21c34 3px solid;
+      text-align: left; }
       .about-info .timeline .job-2 img {
         left: -35rem;
         position: relative;
