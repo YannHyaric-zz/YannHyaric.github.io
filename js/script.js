@@ -16,6 +16,15 @@ $(document).ready(function () {
       backSpeed: 40,
       loop: true,
     });
+  } else if (
+    document.getElementsByTagName("html")[0].getAttribute("lang") == "es"
+  ) {
+    var typed = new Typed(".typing", {
+      strings: ["Desarrollador ", " Programador ", " Ingeniero de software"],
+      typeSpeed: 80,
+      backSpeed: 40,
+      loop: true,
+    });
   } else {
     var typed = new Typed(".typing", {
       strings: ["Developer", "Programmer", "Software Engineer"],
