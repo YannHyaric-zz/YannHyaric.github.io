@@ -41,12 +41,16 @@ a {
 }
 
 header {
-  position: fixed;
   z-index: 2;
   width: 100%;
+
+  .language {
+    width: fit-content;
+  }
+
   a {
-    display: flex;
-    flex-direction: column;
+    display: block;
+    margin-right: 1rem;
   }
 }
 
@@ -55,17 +59,17 @@ header {
 }
 
 main {
-  padding: 4rem;
+  padding: 4rem 0;
   text-align: center;
 
   .icons {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    padding: 1.5rem 0 0 0;
+    display: inline;
+    background-color: #333;
 
     a {
-      padding: 0.4rem;
       @include easeOut;
-
+      margin: 1rem;
       &:hover {
         color: $secondary-color;
       }
@@ -121,21 +125,35 @@ main {
     }
   }
   .timeline {
+    margin-left: 1rem;
     position: relative;
     border-left: rgb(255, 255, 0) 5px solid;
 
+    .title {
+      margin-left: 5rem;
+    }
+
     .job {
       background: $primary-color;
-      display: grid;
-      flex-direction: column;
-      justify-content: center;
-      padding: 1rem;
-      width: 80%;
-      margin: 1rem 9.5rem;
-      align-items: center;
+      display: inline-grid;
 
-      h2 {
-        margin: 1rem;
+      grid-gap: 30px;
+      grid-template-areas: "c1 c2";
+      gap: 10rem;
+      grid-template-columns: 5% 75%;
+      width: 65%;
+      width: 80%;
+      padding-top: 1rem;
+
+      .c1 {
+        grid-area: c1;
+      }
+      .c2 {
+        grid-area: c2;
+        .paragrafo {
+          text-align: justify;
+          font-size: larger;
+        }
       }
       &::before {
         position: absolute;
@@ -149,6 +167,7 @@ main {
       }
       &::before {
         content: attr(date);
+        margin-top: 5rem;
         left: 5px;
       }
       &::after {
@@ -159,15 +178,10 @@ main {
         font-weight: 500;
         background-size: cover;
         background-color: black;
-      }
-      .paragrafo {
-        text-align: justify;
-        font-size: larger;
+        margin-top: 5rem;
       }
 
       img {
-        left: -30rem;
-        position: relative;
         height: 4rem;
       }
     }
@@ -176,17 +190,15 @@ main {
     }
     .job-2 {
       border-top: rgb(194, 28, 52) 3px solid;
-      text-align: left;
-
-      .job-3 {
-        border-top: rgb(30, 255, 0) 3px solid;
-      }
-      .job-4 {
-        border-top: rgb(255, 0, 200) 3px solid;
-      }
-      .job-5 {
-        border-top: rgb(0, 255, 235) 3px solid;
-      }
+    }
+    .job-3 {
+      border-top: rgb(30, 255, 0) 3px solid;
+    }
+    .job-4 {
+      border-top: rgb(255, 0, 200) 3px solid;
+    }
+    .job-5 {
+      border-top: rgb(0, 255, 235) 3px solid;
     }
   }
 }
@@ -271,14 +283,11 @@ main {
 // Work/Projects
 .projects {
   display: grid;
-  grid-gap: 0.7rem;
+  gap: 2rem;
   grid-template-columns: repeat(1, 2fr);
-  .amazon {
-    height: 25rem;
-  }
 
   img {
-    width: 100%;
+    width: 95%;
     height: 70%;
     border: 3px #fff solid;
     transition: 1s;
@@ -286,8 +295,8 @@ main {
     &:hover {
       opacity: 0.7;
       border-color: $secondary-color;
-      height: 80%;
-      width: 110%;
+      height: 75%;
+      width: 100%;
       @include easeOut;
     }
   }
@@ -344,6 +353,8 @@ main {
 }
 
 #main-footer {
+  position: relative;
+  bottom: 0;
   padding-bottom: 0;
   width: 100%;
   text-align: center;
@@ -360,5 +371,9 @@ main {
 .nome {
   color: rgb(185, 185, 185);
 }
-
+@media (min-width: 50em) {
+  .job-1 {
+    font-weight: bold;
+  }
+}
 @import "mobile";

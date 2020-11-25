@@ -103,14 +103,14 @@ body {
   body#bg-img {
     background: url(../img/background.jpg);
     background-attachment: fixed;
-    background-size: cover; }
+    background-size: covers; }
     body#bg-img:after {
       content: "";
       position: absolute;
       top: 0;
       right: 0;
       width: 100%;
-      height: 200%;
+      height: 110%;
       z-index: -1;
       background: rgba(35, 35, 35, 0.9); }
 
@@ -138,25 +138,27 @@ a {
   text-decoration: none; }
 
 header {
-  position: fixed;
   z-index: 2;
   width: 100%; }
+  header .language {
+    width: fit-content; }
   header a {
-    display: flex;
-    flex-direction: column; }
+    display: block;
+    margin-right: 1rem; }
 
 .text-secondary {
   color: #eece1a; }
 
 main {
-  padding: 4rem;
+  padding: 4rem 0;
   text-align: center; }
   main .icons {
-    margin-top: 1rem;
-    margin-bottom: 1rem; }
+    padding: 1.5rem 0 0 0;
+    display: inline;
+    background-color: #333; }
     main .icons a {
-      padding: 0.4rem;
-      transition: all 0.5s ease-out; }
+      transition: all 0.5s ease-out;
+      margin: 1rem; }
       main .icons a:hover {
         color: #eece1a; }
       main .icons a .fa-facebook {
@@ -195,19 +197,28 @@ main {
     .about-info .bio p {
       text-align: left; }
   .about-info .timeline {
+    margin-left: 1rem;
     position: relative;
     border-left: yellow 5px solid; }
+    .about-info .timeline .title {
+      margin-left: 5rem; }
     .about-info .timeline .job {
       background: #232323;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 1rem;
+      display: inline-grid;
+      grid-gap: 30px;
+      grid-template-areas: "c1 c2";
+      gap: 10rem;
+      grid-template-columns: 5% 75%;
+      width: 65%;
       width: 80%;
-      margin: 1rem 9.5rem;
-      align-items: center; }
-      .about-info .timeline .job h2 {
-        margin: 1rem; }
+      padding-top: 1rem; }
+      .about-info .timeline .job .c1 {
+        grid-area: c1; }
+      .about-info .timeline .job .c2 {
+        grid-area: c2; }
+        .about-info .timeline .job .c2 .paragrafo {
+          text-align: justify;
+          font-size: larger; }
       .about-info .timeline .job::before {
         position: absolute;
         display: block;
@@ -218,6 +229,7 @@ main {
         transform: translateY(-50%); }
       .about-info .timeline .job::before {
         content: attr(date);
+        margin-top: 5rem;
         left: 5px; }
       .about-info .timeline .job::after {
         content: "O";
@@ -226,25 +238,20 @@ main {
         left: -8.9px;
         font-weight: 500;
         background-size: cover;
-        background-color: black; }
-      .about-info .timeline .job .paragrafo {
-        text-align: justify;
-        font-size: larger; }
+        background-color: black;
+        margin-top: 5rem; }
       .about-info .timeline .job img {
-        left: -30rem;
-        position: relative;
         height: 4rem; }
     .about-info .timeline .job-1 {
       border-top: #bebebe 3px solid; }
     .about-info .timeline .job-2 {
-      border-top: #c21c34 3px solid;
-      text-align: left; }
-      .about-info .timeline .job-2 .job-3 {
-        border-top: #1eff00 3px solid; }
-      .about-info .timeline .job-2 .job-4 {
-        border-top: #ff00c8 3px solid; }
-      .about-info .timeline .job-2 .job-5 {
-        border-top: #00ffeb 3px solid; }
+      border-top: #c21c34 3px solid; }
+    .about-info .timeline .job-3 {
+      border-top: #1eff00 3px solid; }
+    .about-info .timeline .job-4 {
+      border-top: #ff00c8 3px solid; }
+    .about-info .timeline .job-5 {
+      border-top: #00ffeb 3px solid; }
 
 .skills .lista {
   list-style: none;
@@ -311,20 +318,18 @@ main {
 
 .projects {
   display: grid;
-  grid-gap: 0.7rem;
+  gap: 2rem;
   grid-template-columns: repeat(1, 2fr); }
-  .projects .amazon {
-    height: 25rem; }
   .projects img {
-    width: 100%;
+    width: 95%;
     height: 70%;
     border: 3px #fff solid;
     transition: 1s; }
     .projects img:hover {
       opacity: 0.7;
       border-color: #eece1a;
-      height: 80%;
-      width: 110%;
+      height: 75%;
+      width: 100%;
       transition: all 0.5s ease-out; }
 
 .boxes {
@@ -364,6 +369,8 @@ main {
   color: #333; }
 
 #main-footer {
+  position: relative;
+  bottom: 0;
   padding-bottom: 0;
   width: 100%;
   text-align: center;
@@ -378,6 +385,10 @@ main {
 
 .nome {
   color: #b9b9b9; }
+
+@media (min-width: 50em) {
+  .job-1 {
+    font-weight: bold; } }
 
 @media screen and (min-width: 1171px) {
   .projects {
