@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,16 +11,17 @@
       crossorigin="anonymous"
     />
 
-    <link rel="stylesheet" href="../css/main.css" />
-    <title>View My Work</title>
+    <link rel="stylesheet" href="../../css/main.css" />
+    <title>Veja meus Trabalhos</title>
   </head>
 
-  <body id="bg-img">
+  <body>
     <header>
-      <a href="../BR/work.html" lang="br" hreflang="br">Portugues-BR</a>
-      <a href="../FR/work.html" lang="fr" hreflang="fr">Français-FR</a>
-      <a href="../ES/index.html" lang="es" hreflang="es">Español-ES</a>
-
+      <div class="language">
+        <a href="../EN/skills.html" lang="en" hreflang="en">English-EN</a>
+        <a href="../FR/skills.html" lang="fr" hreflang="fr">Français-FR</a>
+        <a href="../BR/skills.html" lang="br" hreflang="br">Portugues-BR</a>
+      </div>
       <div class="menu-btn">
         <div class="btn-line"></div>
         <div class="btn-line"></div>
@@ -35,17 +36,17 @@
           <li class="nav-item">
             <a href="index.html" class="nav-link"> Home </a>
           </li>
-          <li class="nav-item">
-            <a href="about.html" class="nav-link"> About Me </a>
+          <li class="nav-item current">
+            <a href="about.html" class="nav-link"> Sobre Mi </a>
           </li>
           <li class="nav-item">
             <a href="skills.html" class="nav-link"> Skills </a>
           </li>
-          <li class="nav-item current">
-            <a href="work.html" class="nav-link"> My Work </a>
+          <li class="nav-item">
+            <a href="work.html" class="nav-link"> Trabajos </a>
           </li>
           <li class="nav-item">
-            <a href="contact.html" class="nav-link"> How To Reach Me </a>
+            <a href="contact.html" class="nav-link"> Contacto </a>
           </li>
         </ul>
       </nav>
@@ -53,20 +54,20 @@
 
     <main id="work">
       <h1 class="lg-heading">
-        My
-        <span class="text-secondary">Work</span>
+        Meus
+        <span class="text-secondary">Trabalhos</span>
       </h1>
-      <h2 class="sm-heading">Check out some of my projects</h2>
+      <h2 class="sm-heading">Ver mis proyectos terminados</h2>
       <div class="projects">
-        <div class="item">
+        <div class="item amazon">
           <a href="https://yannhyaric.github.io/Amazon-Copia/">
-            <img src="../img/projects/Amazon.png" alt="Project" />
+            <img src="../img/projects/Amazon.png" alt="Amazon-Clone" />
           </a>
           <a
             href="https://yannhyaric.github.io/Amazon-Copia/"
             class="btn-light"
           >
-            <i class="fas fa-eye"></i> Amazon Clone
+            <i class="fas fa-eye"></i> Amazon-Clone
           </a>
           <a href="https://github.com/YannHyaric/Amazon-Copia" class="btn-dark">
             <i class="fab fa-github"></i> Github
@@ -74,13 +75,13 @@
         </div>
         <div class="item">
           <a href="https://yannhyaric.github.io/Mercado-Livre-Clone/">
-            <img src="../img/projects/project2.jpg" alt="Project" />
+            <img src="../img/projects/project1.jpg" alt="Project" />
           </a>
           <a
             href="https://yannhyaric.github.io/Mercado-Livre-Clone/"
             class="btn-light"
           >
-            <i class="fas fa-eye"></i> Mercado Livre Clone
+            <i class="fas fa-eye"></i> Mercado Livre-Clone
           </a>
           <a
             href="https://github.com/YannHyaric/Mercado-Livre-Clone"
@@ -91,7 +92,7 @@
         </div>
         <div class="item">
           <a href="#!">
-            <img src="../img/projects/project3.jpg" alt="Project" />
+            <img src="../img/projects/project1.jpg" alt="Project" />
           </a>
           <a href="#" class="btn-light">
             <i class="fas fa-eye"></i> Be The Hero
@@ -105,6 +106,6 @@
 
     <footer id="main-footer">Copyright &copy; 2020</footer>
 
-    <script src="../js/main.js"></script>
+    <script src="../../js/main.js"></script>
   </body>
 </html>
